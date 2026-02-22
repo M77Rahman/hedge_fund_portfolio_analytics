@@ -1,0 +1,10 @@
+metric,value
+Start date,2021-02-22
+End date,2026-02-20
+Total return,233.95%
+Annualised return,27.37%
+Annualised volatility,29.58%
+Sharpe (rf=0),0.93
+Max drawdown,-43.25%
+Assets,"AAPL, MSFT, NVDA, SPY, TSLA"
+Rebalance,"Daily (equal-weight, simple mean of available returns)"
