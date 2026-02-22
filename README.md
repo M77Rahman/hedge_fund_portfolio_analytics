@@ -50,6 +50,13 @@ Asset Equity Comparison
 
 20-Day Rolling Volatility
 
+
+### Correlation Matrix
+![Correlation Matrix](outputs/correlation_matrix.png)
+
+### Risk Contribution by Asset
+![Risk Contribution](outputs/risk_contribution_bar.png)
+
 Technical Stack
 
 Python
