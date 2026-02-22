@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+.env/
+
+# Data caches
+*.sqlite
+*.db
+
+# IDE
+.vscode/
+.DS_Store
