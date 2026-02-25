@@ -19,7 +19,11 @@ Risk-adjusted performance evaluation
 
 Correlation and risk contribution analysis
 
+<<<<<<< HEAD
 Assets Analysed
+=======
+Assets analysed:
+>>>>>>> 2f95c17080c3825fd129d49cb278ee99b195138d
 
 AAPL
 
@@ -31,7 +35,11 @@ SPY
 
 TSLA
 
+<<<<<<< HEAD
 Portfolio Construction
+=======
+Portfolio construction:
+>>>>>>> 2f95c17080c3825fd129d49cb278ee99b195138d
 
 Equal-weight allocation
 
@@ -40,6 +48,7 @@ Daily rebalancing (simple average of available returns)
 Performance Summary
 
 Period analysed: 2021-02-22 to 2026-02-20
+<<<<<<< HEAD
 
 Metric	Value
 Total Return	233.95%
@@ -47,6 +56,30 @@ Annualised Return	27.37%
 Annualised Volatility	29.58%
 Sharpe Ratio (rf = 0)	0.93
 Maximum Drawdown	-43.25%
+Key Observations
+=======
+>>>>>>> 2f95c17080c3825fd129d49cb278ee99b195138d
+
+Despite equal weighting, NVDA and TSLA contributed disproportionately to total portfolio risk.
+
+The portfolio experienced a maximum drawdown of -43%, reflecting high exposure to volatile growth equities.
+
+Correlation analysis shows clustering among technology stocks, reducing diversification benefits during stress periods.
+
+<<<<<<< HEAD
+Risk-adjusted performance (Sharpe 0.93) indicates strong returns but with elevated volatility.
+=======
+Sharpe Ratio (rf = 0): 0.93
+>>>>>>> 2f95c17080c3825fd129d49cb278ee99b195138d
+
+Risk Analysis
+Correlation Matrix
+
+<<<<<<< HEAD
+Risk Contribution by Asset
+
+Risk contribution was calculated using:
+=======
 Key Observations
 
 Despite equal weighting, NVDA and TSLA contributed disproportionately to total portfolio risk.
@@ -62,7 +95,8 @@ Correlation Matrix
 
 Risk Contribution by Asset
 
-Risk contribution was calculated using:
+Risk contribution was calculated using component risk methodology:
+>>>>>>> 2f95c17080c3825fd129d49cb278ee99b195138d
 
 Annualised covariance matrix
 
@@ -119,7 +153,11 @@ Duplicate date-ticker pairs removed
 
 Missing values tracked
 
+<<<<<<< HEAD
 Validation of required columns
+=======
+Explicit validation of required columns
+>>>>>>> 2f95c17080c3825fd129d49cb278ee99b195138d
 
 Separate data quality summary table generated
 
@@ -155,4 +193,10 @@ matplotlib
 
 seaborn
 
+<<<<<<< HEAD
 SQLite
+=======
+SQLite
+
+This project demonstrates structured data engineering, quantitative analysis, and automated reporting within a financial context.
+>>>>>>> 2f95c17080c3825fd129d49cb278ee99b195138d
