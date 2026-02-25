@@ -1,35 +1,45 @@
-Hedge Fund Portfolio Analytics Dashboard
+Equity Portfolio Risk & Performance Analytics
 Overview
 
-This project simulates a multi-asset equity portfolio and evaluates its performance and risk characteristics over a 5-year period.
+This project analyses a multi-asset equity portfolio using 5 years of daily historical market data.
 
-The objective was to replicate core analytical workflows used in hedge fund and asset management environments:
+The objective was to replicate core analytical workflows used in asset management environments:
 
-Historical price ingestion
-
-Data cleaning and validation
+Data ingestion and cleaning
 
 Return calculation
 
-Rolling volatility analysis
+Rolling volatility estimation
 
 Drawdown tracking
 
-Portfolio construction (equal-weight)
+Portfolio aggregation
 
-Risk-adjusted performance metrics
+Risk-adjusted performance evaluation
 
-Assets included:
-AAPL, MSFT, NVDA, SPY, TSLA
+Correlation and risk contribution analysis
 
-Rebalancing approach:
-Daily equal-weight portfolio (mean of available daily returns)
+Assets analysed:
+
+AAPL
+
+MSFT
+
+NVDA
+
+SPY
+
+TSLA
+
+Portfolio construction:
+
+Equal-weight allocation
+
+Daily rebalancing (simple average of available returns)
 
 Performance Summary
 
-Start Date: 2021-02-22
-
-End Date: 2026-02-20
+Period analysed: 2021-02-22 to 2026-02-20
 
 Total Return: 233.95%
 
@@ -37,11 +47,34 @@ Annualised Return: 27.37%
 
 Annualised Volatility: 29.58%
 
-Sharpe Ratio (rf=0): 0.93
+Sharpe Ratio (rf = 0): 0.93
 
 Maximum Drawdown: -43.25%
 
-Key Visual Outputs
+Key Observations
+
+Despite equal weighting, NVDA and TSLA contributed disproportionately to total portfolio risk.
+
+The portfolio experienced a maximum drawdown of -43%, reflecting high exposure to volatile growth equities.
+
+Correlation analysis shows clustering among technology stocks, reducing diversification benefits during stress periods.
+
+Risk-adjusted performance (Sharpe 0.93) indicates strong returns but with elevated volatility.
+
+Risk Analysis
+Correlation Matrix
+
+Risk Contribution by Asset
+
+Risk contribution was calculated using component risk methodology:
+
+Annualised covariance matrix
+
+Marginal contribution to risk
+
+Component contribution to total portfolio volatility
+
+Visual Outputs
 Portfolio Equity Curve
 
 Portfolio Drawdown
@@ -50,48 +83,61 @@ Asset Equity Comparison
 
 20-Day Rolling Volatility
 
+Technical Architecture
 
-### Correlation Matrix
-![Correlation Matrix](outputs/correlation_matrix.png)
+Historical price data pulled using yfinance
 
-### Risk Contribution by Asset
-![Risk Contribution](outputs/risk_contribution_bar.png)
+Data cleaned and validated using pandas
 
-Technical Stack
+Returns, volatility, and drawdowns computed programmatically
 
-Python
-pandas
-numpy
-matplotlib
-SQLite
-
-Architecture
-
-Data pulled using yfinance
-
-Cleaned and transformed with pandas
-
-Returns and rolling metrics computed
-
-Portfolio returns aggregated
+Portfolio aggregated from individual asset returns
 
 SQLite database generated for structured querying
 
-Visual outputs generated programmatically
+Automated visual reports exported as PNG files
 
-Risk & Analytics Concepts Applied
+Metrics Implemented
 
-Compounded returns
+Daily returns
 
-Rolling standard deviation
+Compounded equity curves
+
+Rolling 20-day volatility
 
 Maximum drawdown
 
-Risk-adjusted performance (Sharpe ratio)
+Annualised return
 
-Portfolio aggregation logic
+Annualised volatility
 
-Data quality validation
+Sharpe ratio
+
+Correlation matrix
+
+Component risk contribution
+
+Data Quality Controls
+
+Duplicate date-ticker pairs removed
+
+Missing values tracked
+
+Explicit validation of required columns
+
+Separate data quality summary table generated
+
+Limitations & Assumptions
+
+Equal-weight portfolio (no optimisation applied)
+
+No transaction costs included
+
+Risk-free rate assumed to be 0%
+
+No survivorship bias adjustments
+
+Daily rebalancing assumption may overstate turnover
 
 How To Reproduce
 pip install -r requirements.txt
@@ -100,3 +146,19 @@ python src/02_build_metrics.py
 python src/03_load_sqlite.py
 python src/04_generate_charts.py
 python src/05_summary_stats.py
+python src/06_risk_analysis.py
+Tools Used
+
+Python
+
+pandas
+
+numpy
+
+matplotlib
+
+seaborn
+
+SQLite
+
+This project demonstrates structured data engineering, quantitative analysis, and automated reporting within a financial context.
